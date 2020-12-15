@@ -9,7 +9,7 @@ function App() {
         className="App"
         style={{
           display: "flex",
-          paddingTop: "10rem",
+          paddingTop: "5rem",
           paddingLeft: "10rem",
           flexDirection: "column",
           alignItems: "flex-start",
