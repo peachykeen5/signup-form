@@ -30,7 +30,7 @@ export const Input = ({ inputType, placeholder, onChange }) => {
         required
         onChange={(e) => handleChange(e.target.value)}
         size={12}
-        style={{ flex: 2 }}
+        style={{ flex: 2, fontSize: 14 }}
       />
       {inputType === "password" ? (
         <span toggle="#password-field" className="toggle-password">
@@ -39,7 +39,6 @@ export const Input = ({ inputType, placeholder, onChange }) => {
               margin: 0,
               color: "#008ada",
               fontSize: 14,
-              letterSpacing: 2,
             }}
             onClick={() => setIsSecure(!isSecure)}
           >
