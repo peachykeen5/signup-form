@@ -23,6 +23,11 @@ export const SignupForm = () => {
       alert("success!");
     }
   };
+  const disabled = !(
+    signUpState.email &&
+    signUpState.password &&
+    signUpState.confirmPassword
+  );
 
   return (
     <div
@@ -50,13 +55,9 @@ export const SignupForm = () => {
         className="submit-button"
         type="submit"
         value="Create account"
-        disabled={
-          !signUpState.password ||
-          !signUpState.confirmPassword ||
-          !signUpState.email
-        }
+        disabled={disabled}
         style={{
-          backgroundColor: "#3884b1",
+          backgroundColor: `${disabled ? "#a7c4d6" : "#3884b1"}`,
           color: "white",
           textTransform: "uppercase",
           letterSpacing: "2px",
